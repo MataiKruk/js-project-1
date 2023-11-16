@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pennywise</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Pennywise</h1>
-        <button>Notifications</button>
-    </header>
 
+    <p id="budget"></p>
     <form>
-        <select id="purchaseCategories">
-            <option value="Entertainment" min=“0”>Entertainment</option>
-            <option value="Food" min=“0”>Food</option>
-            <option value="Clothing" min=“0”>Clothing</option>
-            <option value="Bills" min=“0”>Bills</option>
-        </select>
-
-        <input type="number"/>
+        <input type="number" id="budget2" min="0"/>
+        <button id="budSubmit">Submit</button>
     </form>
 
-    <main>
-        <h2>Budget to Spend</h2>
-        <div id="piechart"></div>
-        <img src ="https://cdn.icon-icons.com/icons2/72/PNG/256/bank_14474.png">
-    </main>
+    <div id="Entertainment">
+        <p>Entertainment</p>
+    </div>
 
-    <footer>
-        <ul>
-            <li><button>Add Transaction</button></li>
-            <li><button>Spending Chart</button></li>
-            <li><button>Settings/Accounts</button></li>
-            <li><button>Placeholder</button></li>
-        </ul>
-    </footer>
+    <div id="Food">
+        <p>Food</p>
+    </div>
+
+    <div id="Clothing">
+        <p>Clothing</p>
+    </div>
+
+    <div id="Bills">
+        <p>Bills</p>
+    </div>
+
+    <button id="btnEntertainment">Entertainment</button>
+    <button id="btnFood">Food</button>
+    <button id="btnClothing">Clothing</button>
+    <button id="btnBills">Bills</button>
+
+    <script src="script.js"></script>
 </body>
