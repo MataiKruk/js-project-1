@@ -1,6 +1,10 @@
 let budget = document.querySelector("#budgetInput");
 let budgetSet;
+
+let whatever = 1;
+
 let random = 5;
+
 
 //hide everything EXCEPT entertainment
 document.querySelector("#btnEntertainment").addEventListener('click', () => {
