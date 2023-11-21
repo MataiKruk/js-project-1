@@ -8,6 +8,7 @@ document.querySelector("#btnEntertainment").addEventListener('click', () => {
     document.querySelector("#food").style.display = 'none';
     document.querySelector("#clothing").style.display = 'none';
     document.querySelector("#bills").style.display = 'none';
+    document.getElementById("clown-face").style.display = 'none';
 });
 
 //hide everything EXCEPT food
@@ -17,6 +18,7 @@ document.querySelector("#btnEntertainment").addEventListener('click', () => {
     document.querySelector("#entertainment").style.display = 'none';
     document.querySelector("#clothing").style.display = 'none';
     document.querySelector("#bills").style.display = 'none';
+    document.getElementById("clown-face").style.display = 'none';
  });
 
  //hide everything EXCEPT clothing
@@ -26,6 +28,7 @@ document.querySelector("#btnEntertainment").addEventListener('click', () => {
     document.querySelector("#food").style.display = 'none';
     document.querySelector("#entertainment").style.display = 'none';
     document.querySelector("#bills").style.display = 'none';
+    document.getElementById("clown-face").style.display = 'none';
  });
 
  //hide everything EXCEPT bills
@@ -35,22 +38,25 @@ document.querySelector("#btnEntertainment").addEventListener('click', () => {
     document.querySelector("#food").style.display = 'none';
     document.querySelector("#clothing").style.display = 'none';
     document.querySelector("#entertainment").style.display = 'none';
+    document.getElementById("clown-face").style.display = 'none';
  });
 
  //grab total budget, create seperate variable that we can adjust with each transaction
  document.querySelector("#budget-form").addEventListener("submit", (e) => {
-   e.preventDefault();
-   budgetSet = parseInt(budget.value);
-   if (isNaN(parseFloat(budgetInput)) || budgetInput <= 0) {
-      displayErrorMessage("Please enter a valid input.");
-      return;
-  }
-   console.log(budgetSet);
+    e.preventDefault();
+    budgetSet = parseInt(budget.value);
+    if (isNaN(parseFloat(budget.value)) || budgetSet <= 0) {
+       displayErrorMessage("Please enter a valid input.");
+       return;
+   }
+    console.log(budgetSet);
 
    //displays final total of transactions
    document.getElementById("budget-total").innerText=`My Budget is $${parseInt(budget.value)}`;
    document.getElementById("weekly-total").innerText=`My Remaining Budget is $${budgetSet}`;
    document.getElementById("budget-form").style.display = 'none';
+   document.getElementById("filler-img").style.display = 'none';
+   document.getElementById("clown-face").style.display = 'block';
 });
 
 function displayErrorMessage(message) {
@@ -66,9 +72,10 @@ function displayErrorMessage(message) {
    //create a div with the image of Pennywise
    const pennywiseMessage = document.createElement("IMG");
    pennywiseMessage.src = "pennywise-image-2.png";
-   pennywiseMessage.setAttribute("width", "500");
-   pennywiseMessage.setAttribute("height", "300");
+//    pennywiseMessage.setAttribute("width", "500");
+//    pennywiseMessage.setAttribute("height", "300");
    pennywiseMessage.setAttribute("alt", "Pennywise");
+   pennywiseMessage.classList.add("pennywisePic");
    errorMessageContainer.appendChild(pennywiseMessage);
 
    // Automatically remove the error message after a few seconds (optional)
@@ -103,7 +110,7 @@ document.querySelector("#entertainment-form").addEventListener("submit", (e) => 
 
     //displays final total of transactions 
     const finalEntertainmentTotal = document.getElementById("entertainment-total-end");
-    finalEntertainmentTotal.innerText = `Total Spent: ${entertainmentTotal}`;
+    finalEntertainmentTotal.innerText = `Total Spent: $${entertainmentTotal}`;
 
     document.getElementById("weekly-total").innerText=`My Remaining Budget is $${budgetSet}`;
     console.log(entertainmentName, parsedEntertainmentCost, entertainmentTotal);
@@ -135,7 +142,7 @@ document.querySelector("#food-form").addEventListener("submit", (e) => {
 
     //displays final total of transactions 
     const finalFoodTotal = document.getElementById("food-total-end");
-    finalFoodTotal.innerText = `Total Spent: ${foodTotal}`;
+    finalFoodTotal.innerText = `Total Spent: $${foodTotal}`;
 
     document.getElementById("weekly-total").innerText=`My Remaining Budget is $${budgetSet}`;
     console.log(foodName, parsedFoodCost, foodTotal);
@@ -166,7 +173,7 @@ document.querySelector("#clothing-form").addEventListener("submit", (e) => {
 
     //displays final total of transactions 
     const finalClothingTotal = document.getElementById("clothing-total-end");
-    finalClothingTotal.innerText = `Total Spent: ${clothingTotal}`;
+    finalClothingTotal.innerText = `Total Spent: $${clothingTotal}`;
 
     document.getElementById("weekly-total").innerText=`My Remaining Budget is $${budgetSet}`;
     console.log(clothingName, parsedClothingCost, clothingTotal);
@@ -197,7 +204,7 @@ document.querySelector("#bills-form").addEventListener("submit", (e) => {
 
     //displays final total of transactions 
     const finalBillsTotal = document.getElementById("bills-total-end");
-    finalBillsTotal.innerText = `Total Spent: ${billsTotal}`;
+    finalBillsTotal.innerText = `Total Spent: $${billsTotal}`;
 
     document.getElementById("weekly-total").innerText=`My Remaining Budget is $${budgetSet}`;
     console.log(billsName, parsedBillsCost, billsTotal);

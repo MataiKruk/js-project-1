@@ -4,13 +4,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 442px;
+    font-family: 'Creepster';
+    background-image: url('circus3.jpg');
+    background-position-x: center;
+    background-position-y: 20%;
+    background-color: rgba(255, 255, 255, 0.25);
+    background-blend-mode: color;
 }
 
 #budget-total {
     margin: 0;
     position: fixed;
     top: 1rem;
+    color: black;
 }
 
 #budget-form > label{
@@ -19,12 +25,33 @@ body {
     align-items: center;
     font-size: 1.5rem;
     margin-top: 10vh;
+    /* background-color: rgba(182, 152, 157, 0.6); */
+    border-radius: 1rem;
+    padding: 1rem;
+    /* border: 2px #610405 solid; */
 }
 
 #budget-form > label > button{
     padding: 1rem;
     border: solid black 2px;
     border-radius: 1rem;
+    border: #610405 2px solid;
+    font-family: 'Creepster';
+    font-size: medium;
+}
+
+#error-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+}
+
+.pennywisePic {
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 main {
@@ -32,25 +59,35 @@ main {
     margin: 0;
 }
 
+#clown-face {
+    display: none;
+    position: fixed;
+}
+
 .main-forms {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
+    background-color: rgba(182, 152, 157, 0.6);
     max-width: fit-content;
-    max-height: 72vh;
-    min-height: 72vh;
+    max-height: 74vh;
+    min-height: 74vh;
     margin-top: 25%;
     text-align: center;
     padding: 0.5rem;
+    border-radius: 1rem;
+    border: #7a0001 2px solid;
 }
 
-.main-forms > label {
-    
+.main-forms > label > button{
+    margin-top: 1rem;
+    border-radius: 1rem;
+    font-family: 'Creepster';
+    border: #610405 2px solid;
 }
 
 .main-forms > label > ul {
     max-height: 59vh;
-    color: palevioletred;
+    color: #3c0c15;
     overflow: scroll;
     list-style-type: none;
     margin: 0;
@@ -78,13 +115,19 @@ main {
     display: none;
 }
 
-#weekly-total {
+#filler-img {
     position: fixed;
-    bottom: 5rem;
-    font-size: 1.5rem;
+    top: 30vh;
 }
 
-footer {
+#weekly-total {
+    position: fixed;
+    bottom: 4rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+footer > label {
     display: flex;
     position: fixed;
     left: 0;
@@ -92,16 +135,20 @@ footer {
     width: 100%;
     justify-content: space-evenly;
     padding: 1em 0;
-    background-color: lightgray;
+    background-color: rgba(182, 152, 157, 0.6);
+    border-top: 2px #610405 solid;
 }
 
 /* buttons look a little weird, plan on maybe using icons 
 so that they can all be the same size*/
-footer > button {
-    width: 3rem;
-    height: 3rem;
-    margin: 0 1em;
-    padding: 0;
+footer > label > button {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: #610405 2px solid;
+    font-size: small;
+    font-family: 'Creepster';
+    background-color: #a65219;
+    color: #f1e9d1;
 }
 
 @media (min-width: 443px) {
