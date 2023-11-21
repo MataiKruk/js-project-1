@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pennywise</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,8 +19,12 @@
         </label>
     </form>
 
+    <div id="clown-face">
+        <img src="it-pennywise-deluxe_grande.webp">
+    </div>
+
     <div id="entertainment">
-        <form id="entertainment-form">
+        <form id="entertainment-form" class ="main-forms">
             <label> Entertainment Transactions <br>
                 Transaction Name: <input id="entertainment-name" name="entertainment-name" type="text" placeholder="Transaction Name"><br>
                 Cost: <input id="entertainment-cost" name="entertainment-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
@@ -31,7 +38,7 @@
     </div>
 
     <div id="food">
-        <form id="food-form">
+        <form id="food-form" class ="main-forms">
             <label> Food Transactions <br>
                 Transaction Name: <input id="food-name" name="food-name" type="text" placeholder="Transaction Name"><br>
                 Cost: <input id="food-cost" name="food-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
@@ -44,7 +51,7 @@
     </div>
 
     <div id="clothing">
-        <form id="clothing-form">
+        <form id="clothing-form" class ="main-forms">
             <label> Clothing Transactions <br>
                 Transaction Name: <input id="clothing-name" name="clothing-name" type="text" placeholder="Transaction Name"><br>
                 Cost: <input id="clothing-cost" name="clothing-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
@@ -57,7 +64,7 @@
     </div>
 
     <div id="bills">
-        <form id="bills-form">
+        <form id="bills-form" class ="main-forms">
             <label> Bills <br>
                 Transaction Name: <input id="bills-name" name="bills-name" type="text" placeholder="Bill Name"><br>
                 Cost: <input id="bills-cost" name="bills-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
@@ -69,17 +76,23 @@
         </form>
     </div>
 
+    <div id="filler-img">
+        <img src="clown.avif">
+    </div>
+
     <div id="error-message-container">
     </div>
 
     <h1 id="weekly-total"></h1>
 
     <footer>
-        <button id="btnEntertainment">Entertainment</button>
-        <button id="btnFood">Food</button>
-        <button id="btnClothing">Clothing</button>
-        <button id="btnBills">Bills</button>
+        <label>
+            <button id="btnEntertainment">Entertainment</button>
+            <button id="btnFood">Food</button>
+            <button id="btnClothing">Clothing</button>
+            <button id="btnBills">Bills</button>
+        </label>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
