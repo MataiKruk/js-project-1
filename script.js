@@ -71,7 +71,7 @@ function displayErrorMessage(message) {
 
    //create a div with the image of Pennywise
    const pennywiseMessage = document.createElement("IMG");
-   pennywiseMessage.src = "pennywise-image-2.png";
+   pennywiseMessage.src = "images/pennywise-image-2.png";
 //    pennywiseMessage.setAttribute("width", "500");
 //    pennywiseMessage.setAttribute("height", "300");
    pennywiseMessage.setAttribute("alt", "Pennywise");

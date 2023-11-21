@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: 'Creepster';
-    background-image: url('circus3.jpg');
+    background-image: url('images/circus3.jpg');
     background-position-x: center;
     background-position-y: 20%;
     background-color: rgba(255, 255, 255, 0.25);
@@ -25,10 +25,8 @@ body {
     align-items: center;
     font-size: 1.5rem;
     margin-top: 10vh;
-    /* background-color: rgba(182, 152, 157, 0.6); */
     border-radius: 1rem;
     padding: 1rem;
-    /* border: 2px #610405 solid; */
 }
 
 #budget-form > label > button{
