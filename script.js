@@ -65,8 +65,8 @@ function displayErrorMessage(message) {
 
    //create a div with the image of Pennywise
    const pennywiseMessage = document.createElement("IMG");
-   pennywiseMessage.src = "pennywise_message.png";
-   pennywiseMessage.setAttribute("width", "300");
+   pennywiseMessage.src = "pennywise-image-2.png";
+   pennywiseMessage.setAttribute("width", "500");
    pennywiseMessage.setAttribute("height", "300");
    pennywiseMessage.setAttribute("alt", "Pennywise");
    errorMessageContainer.appendChild(pennywiseMessage);
@@ -191,7 +191,7 @@ document.querySelector("#bills-form").addEventListener("submit", (e) => {
 
     //lists all the transcaction names and costs
     const newBillsList = document.createElement("LI");
-    newBillsList.textContent=`Transaction Name: ${billsName}, Transaction Cost:${billsCost}`;
+    newBillsList.innerText=`Transaction Name: ${billsName}, Transaction Cost: ${billsCost}`;
     const billsListContainer = document.getElementById("bills-list-container");
     billsListContainer.appendChild(newBillsList);
 
