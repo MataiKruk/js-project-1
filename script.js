@@ -1,11 +1,6 @@
 let budget = document.querySelector("#budgetInput");
 let budgetSet;
 
-let whatever = 1;
-
-let random = 5;
-
-
 //hide everything EXCEPT entertainment
 document.querySelector("#btnEntertainment").addEventListener('click', () => {
     document.querySelector("#entertainment").style.display = 'block';
@@ -67,13 +62,13 @@ document.querySelector("#entertainment-form").addEventListener("submit", (e) => 
 
     //lists all the transcaction names and costs
     const newEntertainmentList = document.createElement("LI");
-    newEntertainmentList.textContent=`Transaction Name: ${entertainmentName}, Transaction Cost:${entertainmentCost}`;
+    newEntertainmentList.textContent=`Transaction Name: ${entertainmentName}, Transaction Cost: $${entertainmentCost}`;
     const entertainmentListContainer = document.getElementById("entertainment-list-container");
     entertainmentListContainer.appendChild(newEntertainmentList);
 
     //displays final total of transactions 
     const finalEntertainmentTotal = document.getElementById("entertainment-total-end");
-    finalEntertainmentTotal.innerText = `Total Spent: ${entertainmentTotal}`;
+    finalEntertainmentTotal.innerText = `Total Spent: $${entertainmentTotal}`;
 
     document.getElementById("weekly-total").innerText=`My Remaining Budget is $${budgetSet}`;
     console.log(entertainmentName, parsedEntertainmentCost, entertainmentTotal);

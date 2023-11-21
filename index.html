@@ -9,6 +9,7 @@
 <body>
 
     <h1 id="budget-total"></h1>
+    
     <form id="budget-form">
         <label> How much is your budget? <br>
             <input id="budgetInput" name="budget" type="number" min="0" placeholder="Budget Total"><br>
@@ -16,56 +17,60 @@
         </label>
     </form>
 
-    <div id="entertainment">
-        <form id="entertainment-form">
-            <label> Entertainment Transactions <br>
-                Transaction Name: <input id="entertainment-name" name="entertainment-name" type="text" placeholder="Transaction Name"><br>
-                Cost: <input id="entertainment-cost" name="entertainment-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
-                <button> Add Entertainment Transaction </button><br>
-                <ul id="entertainment-list-container">
-                </ul>
-                <p id="entertainment-total-end"></p>
-                
-            </label>
-        </form>
-    </div>
+    <main>
+        <div id="entertainment">
+            <form id="entertainment-form" class="main-forms">
+                <label> Entertainment Transactions <br>
+                    Transaction Name: <input id="entertainment-name" name="entertainment-name" type="text" placeholder="Transaction Name"><br>
+                    Cost: <input id="entertainment-cost" name="entertainment-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
+                    <button> Add Entertainment Transaction </button><br>
+                    <ul id="entertainment-list-container">
+                    </ul>
+                    <p id="entertainment-total-end"></p>
+                    
+                </label>
+            </form>
+        </div>
 
-    <div id="food">
-        <form id="food-form">
-            <label> Food Transactions <br>
-                Transaction Name: <input id="food-name" name="food-name" type="text" placeholder="Transaction Name"><br>
-                Cost: <input id="food-cost" name="food-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
-                <button> Add Food Transaction </button>
-            </label>
-        </form>
-    </div>
+        <div id="food">
+            <form id="food-form" class="main-forms">
+                <label> Food Transactions <br>
+                    Transaction Name: <input id="food-name" name="food-name" type="text" placeholder="Transaction Name"><br>
+                    Cost: <input id="food-cost" name="food-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
+                    <button> Add Food Transaction </button>
+                </label>
+            </form>
+        </div>
 
-    <div id="clothing">
-        <form id="clothing-form">
-            <label> Clothing Transactions <br>
-                Transaction Name: <input id="clothing-name" name="clothing-name" type="text" placeholder="Transaction Name"><br>
-                Cost: <input id="clothing-cost" name="clothing-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
-                <button> Add Clothing Transaction</button>
-            </label>
-        </form>
-    </div>
+        <div id="clothing">
+            <form id="clothing-form" class="main-forms">
+                <label> Clothing Transactions <br>
+                    Transaction Name: <input id="clothing-name" name="clothing-name" type="text" placeholder="Transaction Name"><br>
+                    Cost: <input id="clothing-cost" name="clothing-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
+                    <button> Add Clothing Transaction</button>
+                </label>
+            </form>
+        </div>
 
-    <div id="bills">
-        <form id="bills-form">
-            <label> Bills <br>
-                Transaction Name: <input id="bills-name" name="bills-name" type="text" placeholder="Bill Name"><br>
-                <input id="bills-cost" name="bills-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
-                <button> Add Bills </button>
-            </label>
-        </form>
-    </div>
+        <div id="bills">
+            <form id="bills-form" class="main-forms">
+                <label> Bills <br>
+                    Transaction Name: <input id="bills-name" name="bills-name" type="text" placeholder="Bill Name"><br>
+                    <input id="bills-cost" name="bills-cost" type="number" min="0" placeholder="Cost of Transaction"><br>
+                    <button> Add Bills </button>
+                </label>
+            </form>
+        </div>
+    </main>
 
     <h1 id="weekly-total"></h1>
 
-    <button id="btnEntertainment">Entertainment</button>
-    <button id="btnFood">Food</button>
-    <button id="btnClothing">Clothing</button>
-    <button id="btnBills">Bills</button>
+    <footer>
+        <button id="btnEntertainment">Entertainment</button>
+        <button id="btnFood">Food</button>
+        <button id="btnClothing">Clothing</button>
+        <button id="btnBills">Bills</button>
+    </footer>
 
     <script src="script.js"></script>
 </body>
