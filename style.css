@@ -149,8 +149,70 @@ footer > label > button {
     color: #f1e9d1;
 }
 
+#budget-monitor, #budget-monitor-20 {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+#buttonE {
+    display: inline;
+}
+
+#buttonF {
+    display: inline;
+}
+
+#buttonC {
+    display: inline;
+}
+
+#buttonB {
+    display: inline;
+}
+
 @media (min-width: 443px) {
 
-    
+    body {
+        background-image: url('images/circus.jpg');
+    }
+
+    #clown-face {
+        display: none;
+        position: fixed;
+        top: 12.5%;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    footer > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    footer > label > button {
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: #610405 2px solid;
+        font-size: small;
+        font-family: 'Creepster';
+        background-color: #a65219;
+        color: #f1e9d1;
+        margin: 0 1em;
+    }
 
 }
