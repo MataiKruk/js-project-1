@@ -115,7 +115,7 @@ document.querySelector("#entertainment-form").addEventListener("submit", (e) => 
 
     //lists all the transcaction names and costs
     const newEntertainmentList = document.createElement("LI");
-    newEntertainmentList.textContent=`Transaction Name: ${entertainmentName}, Transaction Cost:${entertainmentCost}`;
+    newEntertainmentList.textContent=`Transaction Name: ${entertainmentName}, Transaction Cost: $${entertainmentCost}`;
     const entertainmentListContainer = document.getElementById("entertainment-list-container");
     entertainmentListContainer.appendChild(newEntertainmentList);
 
@@ -148,7 +148,7 @@ document.querySelector("#food-form").addEventListener("submit", (e) => {
 
     //lists all the transcaction names and costs
     const newFoodList = document.createElement("LI");
-    newFoodList.textContent=`Transaction Name: ${foodName}, Transaction Cost:${foodCost}`;
+    newFoodList.textContent=`Transaction Name: ${foodName}, Transaction Cost: $${foodCost}`;
     const foodListContainer = document.getElementById("food-list-container");
     foodListContainer.appendChild(newFoodList);
 
@@ -180,7 +180,7 @@ document.querySelector("#clothing-form").addEventListener("submit", (e) => {
 
     //lists all the transcaction names and costs
     const newClothingList = document.createElement("LI");
-    newClothingList.textContent=`Transaction Name: ${clothingName}, Transaction Cost:${clothingCost}`;
+    newClothingList.textContent=`Transaction Name: ${clothingName}, Transaction Cost: $${clothingCost}`;
     const clothingListContainer = document.getElementById("clothing-list-container");
     clothingListContainer.appendChild(newClothingList);
 
@@ -212,7 +212,7 @@ document.querySelector("#bills-form").addEventListener("submit", (e) => {
 
     //lists all the transcaction names and costs
     const newBillsList = document.createElement("LI");
-    newBillsList.innerText=`Transaction Name: ${billsName}, Transaction Cost: ${billsCost}`;
+    newBillsList.innerText=`Transaction Name: ${billsName}, Transaction Cost: $${billsCost}`;
     const billsListContainer = document.getElementById("bills-list-container");
     billsListContainer.appendChild(newBillsList);
 

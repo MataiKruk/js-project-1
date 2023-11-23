@@ -12,6 +12,8 @@ body {
     background-blend-mode: color;
 }
 
+
+
 #budget-total {
     margin: 0;
     position: fixed;
@@ -27,6 +29,7 @@ body {
     margin-top: 10vh;
     border-radius: 1rem;
     padding: 1rem;
+    font-size: 1.25rem;
 }
 
 #budget-form > label > button{
@@ -61,6 +64,13 @@ main {
     display: none;
     position: fixed;
 }
+
+#clown-face > p {
+    position: fixed;
+    left: 17.5vw;
+    font-size: 1.5rem;
+}
+
 
 .main-forms {
     display: flex;
@@ -175,6 +185,10 @@ footer > label > button {
 
 #buttonB {
     display: inline;
+}
+
+footer > label > button:disabled {
+    opacity: 0.5;
 }
 
 @media (min-width: 443px) {
