@@ -1,6 +1,13 @@
 let budget = document.querySelector("#budgetInput");
 let budgetSet;
 
+//disable buttons to begin with
+document.getElementById("btnEntertainment").disabled = true;
+document.getElementById("btnFood").disabled = true;
+document.getElementById("btnClothing").disabled = true;
+document.getElementById("btnBills").disabled = true;
+
+
 //hide everything EXCEPT entertainment
 document.querySelector("#btnEntertainment").addEventListener('click', () => {
     document.querySelector("#entertainment").style.display = 'block';
@@ -57,6 +64,10 @@ document.querySelector("#btnEntertainment").addEventListener('click', () => {
    document.getElementById("budget-form").style.display = 'none';
    document.getElementById("filler-img").style.display = 'none';
    document.getElementById("clown-face").style.display = 'block';
+   document.getElementById("btnEntertainment").disabled = false;
+document.getElementById("btnFood").disabled = false;
+document.getElementById("btnClothing").disabled = false;
+document.getElementById("btnBills").disabled = false;
 });
 
 function displayErrorMessage(message) {
@@ -116,6 +127,7 @@ document.querySelector("#entertainment-form").addEventListener("submit", (e) => 
     console.log(entertainmentName, parsedEntertainmentCost, entertainmentTotal);
     console.log("working");
     console.log(budgetSet);
+    checkBudget();
 });
 
 let foodTotal = 0;
@@ -148,6 +160,7 @@ document.querySelector("#food-form").addEventListener("submit", (e) => {
     console.log(foodName, parsedFoodCost, foodTotal);
     console.log("working");
     console.log(budgetSet);
+    checkBudget();
 });
 
 let clothingTotal = 0;
@@ -179,6 +192,7 @@ document.querySelector("#clothing-form").addEventListener("submit", (e) => {
     console.log(clothingName, parsedClothingCost, clothingTotal);
     console.log("working");
     console.log(budgetSet);
+    checkBudget();
 });
 
 let billsTotal = 0;
@@ -210,5 +224,34 @@ document.querySelector("#bills-form").addEventListener("submit", (e) => {
     console.log(billsName, parsedBillsCost, billsTotal);
     console.log("working");
     console.log(budgetSet);
+    checkBudget();
 });
 
+
+
+// Check if the budget is consumed within the week
+function checkBudget() {
+    // Replace this with your logic to determine if the budget is consumed
+    // For example, you might compare the current date with the end of the week
+    const isBudgetConsumed20 = budgetSet <= (budget.value*0.2); // Adjust this based on your logic
+    const isBudgetConsumed = budgetSet <= 0;
+    // Display the budget monitor box if the budget is consumed
+    if (isBudgetConsumed20) {
+        document.getElementById('budget-monitor-20').style.display = 'block';
+    }
+
+    if (isBudgetConsumed) {
+        document.getElementById('budget-monitor-20').style.display = 'none';
+        document.getElementById('budget-monitor').style.display = 'block';
+
+        document.getElementById('buttonE').disabled = true;
+        document.getElementById('buttonF').disabled = true;
+        document.getElementById('buttonC').disabled = true;
+        document.getElementById('buttonB').disabled = true;
+    }
+
+  }
+  
+  // Call the checkBudget function when the page loads
+  window.onload = checkBudget;
+  
